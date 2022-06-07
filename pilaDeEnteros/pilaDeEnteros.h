@@ -9,9 +9,7 @@ typedef struct nodoPilaDeEnteros {
     NodoPilaDeEnteros *s;
 } NodoPilaDeEnteros;
 
-typedef struct pilaDeEnteros {
-    NodoPilaDeEnteros *c;
-} PilaDeEnteros;
+typedef NodoPilaDeEnteros * PilaDeEnteros;
 
 void nuevaPilaDeEnteros(PilaDeEnteros *p);
 void apilarPilaDeEnteros(PilaDeEnteros *p, int x);
