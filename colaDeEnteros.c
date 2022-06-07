@@ -6,11 +6,11 @@ void errorColaDeEnteros(char s[]) {
         exit(-1);
     }
 }
-void nuevaColaDeTElems(ColaDeTElems *c) {
+void nuevaColaDeTElems(ColaDeEnteros *c) {
     c->i = NULL;
     c->f = NULL;
 }
-void pideTurnoColaDeTElems(ColaDeTElems *c, int x) {
+void pideTurnoColaDeTElems(ColaDeEnteros *c, int x) {
     NodoColaDeEnteros * q;
     malloc(q);
     q->e = x;
@@ -21,10 +21,10 @@ void pideTurnoColaDeTElems(ColaDeTElems *c, int x) {
         c->f->s = q;     
     c-> = q;
 }
-bool esNulaColaDeTElems(ColaDeTElems c) {
+bool esNulaColaDeTElems(ColaDeEnteros c) {
     return (c->i == NULL);
 }
-void avanceColaDeTElems(ColaDeTElems *c) {
+void avanceColaDeTElems(ColaDeEnteros *c) {
     NodoColaDeEnteros * q;
     if (esNulaColaDeEnteros(*c))
         errorColaDeEnteros("Avanzando en cola nula");
@@ -34,7 +34,7 @@ void avanceColaDeTElems(ColaDeTElems *c) {
         c-> = NULL;
     free(q);
 }
-void primeroColaDeTElems(ColaDeTElems c, int *x) {
+void primeroColaDeTElems(ColaDeEnteros c, int *x) {
     if (esNulaColaDeTElems(c))
         errorColaDeEnteros("Primero en cola nula");
     *x = c->i->e;
