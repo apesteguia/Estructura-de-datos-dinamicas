@@ -12,7 +12,8 @@ void nuevaColaDeTElems(ColaDeEnteros *c) {
 }
 void pideTurnoColaDeTElems(ColaDeEnteros *c, int x) {
     NodoColaDeEnteros * q;
-    malloc(q);
+    if ((q = malloc(sizeof(NodoColaDeEnteros))) == NULL)
+        errorColaDeEnteros("No hay memoria para nuevo elemento");
     q->e = x;
     q->s = NULL;
     if (c->f == NULL) 
