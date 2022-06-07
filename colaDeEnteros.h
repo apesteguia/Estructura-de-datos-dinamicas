@@ -14,10 +14,10 @@ typedef struct colaDeEnteros {
     NodoDeColaDeEnteros * f;
 } ColaDeEnteros;
         
-void nuevaColaDeTElems(ColaDeTElems *c);
-void pideTurnoColaDeTElems(ColaDeTElems *c, int x);
-void avanceColaDeTElems(ColaDeTElems *c);
-void primeroColaDeTElems(ColaDeTElems c, int *x);
-bool esNulaColaDeTElems(ColaDeTElems c); 
+void nuevaColaDeEnteros(ColaDeTElems *c);
+void pideTurnoColaDeEnteros(ColaDeTElems *c, int x);
+void avanceColaDeEnteros(ColaDeTElems *c);
+void primeroColaDeEnteros(ColaDeTElems c, int *x);
+bool esNulaColaDeEnteros(ColaDeTElems c); 
 
 #endif // !MAG_COLA_DE_ENTEROS
